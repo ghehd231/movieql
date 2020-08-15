@@ -4,9 +4,9 @@ import { people, getById } from './db';
 
 const resolvers = {
   Query: {
-    //스케마에 있는 name에 대한 해결
     people: () => people,
     // person: () => getById(),
+    person: (_, { id }) => getById(id),
   },
 };
 
