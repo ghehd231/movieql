@@ -5,10 +5,12 @@ type Movie {
   summary: String!
   language: String!
   medium_cover_image: String!
+  genres: [String]
 }
 
 type Query {
   #   people: [Person]!
   #   person(id: Int!): Person
   movies(limit: Int, rating: Float): [Movie]!
+  movie(id: Int!): Movie
 }
