@@ -10,5 +10,5 @@ type Movie {
 type Query {
   #   people: [Person]!
   #   person(id: Int!): Person
-  movies: [Movie]!
+  movies(limit: Int, rating: Float): [Movie]!
 }
